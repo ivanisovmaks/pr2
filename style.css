@@ -1,0 +1,25 @@
+body {
+	font-family: 'Roboto Slab', serif;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+	text-align: center;
+}
+
+h1 {
+
+}
+
+button {
+    background-color: #007B63;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 5px 60px 5px 60px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
