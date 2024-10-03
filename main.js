@@ -11,17 +11,18 @@ function countLetters(str, letter) {
     return count;
 }
 
-function getRow(firstRow, secondRow) {
-    const countAInFirstRow = countLetters(firstRow, 'a');
-    const countAInSecondRow = countLetters(secondRow, 'a');
+function getRow(firstRow, secondRow, letter) {
+    const countInFirstRow = countLetters(firstRow, letter);
+    const countInSecondRow = countLetters(secondRow, letter);
     
-    return countAInFirstRow > countAInSecondRow ? firstRow : secondRow;
+    return countInFirstRow > countInSecondRow ? firstRow : secondRow;
 }
 
 document.getElementById('countLetters').addEventListener('click', () => {
     const userInput = prompt("Введіть букву для підрахунку:");
     if (userInput && userInput.length === 1) {
-        alert(`Рядок з більшою кількістю літер '${userInput}': ${getRow(firstRow, secondRow)}`);
+        const resultRow = getRow(firstRow, secondRow, userInput);
+        alert(`Рядок з більшою кількістю літер '${userInput}': ${resultRow}`);
     } else {
         alert("Будь ласка, введіть лише одну букву.");
     }
