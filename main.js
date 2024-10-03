@@ -28,6 +28,7 @@ document.getElementById('countLetters').addEventListener('click', () => {
     }
 });
 
+
 function formattedPhone(phone) {
     const formats = [
         /^\+38\s\((\d{3})\)\s(\d{3})-(\d{2})-(\d{2})$/,
